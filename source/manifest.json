@@ -1,0 +1,60 @@
+{
+	"manifest_version": 2,
+	"name": "Browser Freezer",
+	"version": "0.1",
+	"description": "Adds page action with links to check site security. Future content blocking coming.",
+	"_description": "HTTPS upgrades, content blocking/replacement, script blocking/injection, and event blocking.",
+	
+	"icons": {
+		"48": "icons/border-48.png"
+	},
+	
+	"browser_action": {
+		"browser_style": false,
+		"default_icon": {
+			"48": "icons/border-48.png"
+		},
+		"default_title": "Browser Freezer",
+		"default_popup": "html/browser_action.html"
+	},
+	
+	"page_action": {
+		"browser_style": false,
+		"show_matches": ["<all_urls>"],
+		"default_icon": {
+			"48": "icons/border-48.png"
+		},
+		"default_title": "Browser Freezer Page Info",
+		"default_popup": "html/page_action.html"
+	},
+	
+	"options_ui": {
+		"browser_style": false,
+		"page": "html/options_ui.html",
+		"open_in_tab": true
+	},
+	
+	"background": {
+		"scripts": [
+			"scripts/main.js"
+		]
+	},
+	
+	"content_scripts": [{
+		"all_frames": true,
+		"js": ["scripts/wordreplacer.js"],
+		"matches": ["<all_urls>"],
+		"run_at": "document_end"
+	}],
+	
+	"permissions": [
+		"<all_urls>",
+		"activeTab",
+		"dns",
+		"storage",
+		"unlimitedStorage",
+		"tabs",
+		"webRequest",
+		"webRequestBlocking"
+	]
+}
