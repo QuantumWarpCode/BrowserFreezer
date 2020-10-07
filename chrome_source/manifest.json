@@ -9,16 +9,6 @@
 	},
 	
 	"browser_action": {
-		"browser_style": false,
-		"default_icon": {
-			"48": "icons/border-48.png"
-		},
-		"default_title": "Browser Freezer",
-		"default_popup": "html/browser_action.html"
-	},
-	
-	"page_action": {
-		"browser_style": false,
 		"show_matches": ["<all_urls>"],
 		"default_icon": {
 			"48": "icons/border-48.png"
@@ -28,28 +18,13 @@
 	},
 	
 	"options_ui": {
-		"browser_style": false,
 		"page": "html/options_ui.html",
 		"open_in_tab": true
 	},
 	
-	"background": {
-		"scripts": [
-			"scripts/main.js"
-		]
-	},
-	
-	"content_scripts": [{
-		"all_frames": true,
-		"js": ["scripts/wordreplacer.js"],
-		"matches": ["<all_urls>"],
-		"run_at": "document_end"
-	}],
-	
 	"permissions": [
 		"<all_urls>",
 		"activeTab",
-		"dns",
 		"storage",
 		"unlimitedStorage",
 		"tabs",

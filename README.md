@@ -1,7 +1,7 @@
 # Browser Freezer
 Browser Extension for a Safer, Cleaner Web (currently for Firefox)
 
-This extension aims to cxreate an all-in-one, easy-to-use extension for privacy, security, and user control of the web.
+This extension aims to create an all-in-one, easy-to-use extension for privacy, security, and user control of the web.
 
 # Current Features:
 * Page Action Reputation Links
@@ -36,6 +36,8 @@ This extension aims to cxreate an all-in-one, easy-to-use extension for privacy,
 * Script Replacement
 * Privacy Pass Implementation
 
+* Gopher Connection
+* Gemini Connection
 * Tor Connection
 * I2P Connection
 * IPFS Connection
