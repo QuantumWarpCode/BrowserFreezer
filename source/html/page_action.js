@@ -17,6 +17,7 @@ function findTab(tabs){
 			document.getElementById("safebrowsing").setAttribute('href', "https://transparencyreport.google.com/safe-browsing/search?url=" + searchURL);
 			document.getElementById("virustotal").setAttribute('href', "https://www.virustotal.com/gui/domain/" + hostURL + "/detection");
 			document.getElementById("tosdr").setAttribute('href', "https://tosdr.org/#" + companyURL);
+			document.getElementById("privacyspy").setAttribute('href', "https://privacyspy.org/product/" + companyURL);
 			document.getElementById("geotool").setAttribute('href', "https://iplookup.flagfox.net/?&host=" + searchURL);
 			document.getElementById("whois").setAttribute('href', "https://whois.domaintools.com/" + smallURL);
 			// TODO: icann needs added (if possible)
@@ -31,6 +32,8 @@ function findTab(tabs){
 			document.getElementById("tinyurl").setAttribute('href', "https://tinyurl.com/create.php?source=create&url=" + searchURL);
 			document.getElementById("isgd").setAttribute('href', "https://is.gd/create.php?url=" + searchURL);
 			document.getElementById("wave").setAttribute('href', "https://wave.webaim.org/report#/" + searchURL);
+			document.getElementById("blacklight").setAttribute('href', "https://themarkup.org/blacklight?url=" + searchURL);
+			document.getElementById("wikipedia").setAttribute('href', "https://en.wikipedia.org/wiki/" + companyURL);
 		}
 	}
 }
